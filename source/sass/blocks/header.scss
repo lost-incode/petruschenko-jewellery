@@ -1,0 +1,25 @@
+.header__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 66px 1fr;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 0 19px 0;
+}
+
+.header__logo {
+  width: 66px;
+  height: 66px;
+  justify-self: flex-end;
+  grid-column: 2;
+}
+
+.header__cart {
+  width: max-content;
+  justify-self: flex-end;
+}
+
+.header__search {
+  position: absolute;
+  left: 0;
+  top: 47px;
+}

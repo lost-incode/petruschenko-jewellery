@@ -1,0 +1,51 @@
+.nav__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-dark;
+
+  &:not(:last-child) {
+    margin-right: 34px;
+  }
+}
+
+.nav__search input, .nav__search input::placeholder {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $basic-light;
+  border: none;
+}
+
+.nav__search {
+  padding-left: 29px;
+  display: block;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-color: $basic-black;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-image: url("../img/stack.svg#icon-search");
+  }
+}

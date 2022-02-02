@@ -1,0 +1,7 @@
+.desktop-off {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+  }
+}

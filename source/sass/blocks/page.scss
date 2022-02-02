@@ -1,0 +1,46 @@
+.page {
+  height: 100%;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $basic-white;
+}
+
+.page__container {
+  width: 290px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+
+  @media (min-width: $desktop-maket-width) {
+    width: $desktop-maket-width;
+  }
+
+  &--relative {
+    position: relative;
+  }
+
+  // &--desktop_on {
+  //   @media (max-width: ($desktop-width - 1px)) {
+  //     display: contents;
+  //   }
+  // }
+
+  // &--desktop_off {
+  //   @media (min-width: $desktop-width) {
+  //     display: contents;
+  //   }
+  // }
+}
