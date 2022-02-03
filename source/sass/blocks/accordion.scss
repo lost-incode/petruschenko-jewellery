@@ -1,0 +1,21 @@
+.accordion {
+  border: 1px solid $basic-brown;
+}
+
+.accordion__section {
+  padding: 50px 38px;
+}
+
+.accordion__section:not(:last-child) {
+  border-bottom: 1px solid $basic-brown;
+}
+.accordion__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  margin: 0;
+}
+
+.accordion__text {
+  max-width: 527px;
+}
