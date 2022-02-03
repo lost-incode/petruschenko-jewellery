@@ -1,0 +1,10 @@
+.links__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 67px;
+  row-gap: 30px;
+}
+
+.links__item {
+  width: max-content;
+}
