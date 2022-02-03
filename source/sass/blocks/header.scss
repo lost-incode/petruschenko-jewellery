@@ -1,9 +1,25 @@
+.header {
+  overflow: hidden;
+}
+
 .header__wrapper {
   display: grid;
   grid-template-columns: 1fr 66px 1fr;
   justify-content: flex-end;
   align-items: center;
   padding: 30px 0 19px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200vw;
+    height: 1px;
+    bottom: 0;
+    left: -200%;
+    background-color: $line-color;
+  }
 }
 
 .header__logo {
@@ -11,6 +27,10 @@
   height: 66px;
   justify-self: flex-end;
   grid-column: 2;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .header__cart {
@@ -22,4 +42,31 @@
   position: absolute;
   left: 0;
   top: 47px;
+}
+
+.header__user {
+  position: absolute;
+  right: 60px;
+  top: 54px;
+}
+
+.header__menu-link {
+  color: $basic-dark;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $basic-brown;
+  }
+}
+
+.header__nav {
+  margin-top: 18px;
 }
