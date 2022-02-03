@@ -1,0 +1,15 @@
+.insta__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 230px 399px 230px 230px;
+  grid-template-rows: 230px 150px;
+  column-gap: 27px;
+  row-gap: 34px;
+}
+
+.insta__item--rows {
+  grid-column: 2;
+  grid-row: 1 / -1;
+}
