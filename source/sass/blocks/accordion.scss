@@ -19,3 +19,8 @@
 .accordion__text {
   max-width: 527px;
 }
+
+.accordion__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
