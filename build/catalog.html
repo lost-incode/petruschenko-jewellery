@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jewellery</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper.min.css">
+  <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+</head>
+<body class="page__body">
+  <h1 class="visually-hidden">Главная страница</h1>
+  <header class="header">
+    <div class="page__container page__container--relative">
+      <div class="header__wrapper">
+        <a href="index.html" class="header__logo">
+          <img src="img/logo.svg" alt="Логотип сайта" width="66" height="66" class="header__img">
+        </a>
+        <p class="header__cart">
+          <a class="header__cart-link header__menu-link">
+            <span class="header__cart-text" tabindex="1">Cart<span> 0</span></span>
+          </a>
+        </p>
+      </div>
+      <nav class="header__nav nav">
+        <div class="nav__wrapper">
+          <div class="header__search nav__search">
+            <input type="text" placeholder="Type here to search">
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link header__menu-link">What's new</a></li>
+            <li class="nav__item"><a href="#" class="nav__link header__menu-link">Chokers</a></li>
+            <li class="nav__item"><a href="#" class="nav__link header__menu-link">Necklaces</a></li>
+            <li class="nav__item"><a href="#" class="nav__link header__menu-link">Rings</a></li>
+            <li class="nav__item"><a href="#" class="nav__link header__menu-link">Earrings</a></li>
+          </ul>
+          <ul class="nav__list desktop-off nav__info menu-info">
+            <li class="nav__item menu-info__item header__menu-link"><a href="#" class="menu-info__link">About CH</a></li>
+            <li class="nav__item menu-info__item header__menu-link"><a href="#" class="menu-info__link">Stores & Hours</a></li>
+            <li class="nav__item menu-info__item header__menu-link"><a href="#" class="menu-info__link">Contact Us</a></li>
+          </ul>
+
+          <a href="log-in.html" class="header__user nav__user header__menu-link">Login</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="header__preview-block preview-block preview-block--catalog">
+      <h2 class="preview-block__title">ALL JEWELLERY</h2>
+      <p class="preview-block__subtitle">Discover picks of fashion's finest trends in our jewellery catalog</p>
+    </div>
+  </header>
+
+  <main class="page__main page__main--catalog catalog">
+    <div class="page__container">
+      <div class="catalog__wrapper">
+        <section class="catalog__filters filters">
+          <form action="">
+            <div class="filters__content">
+              <div class="filter">
+                <a class="filter__button"><h2 class="filter__title">Product</h2></a>
+                <div class="filter__content">
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" name="product" id="necklaces">
+                    <label for="necklaces">Necklaces</label>
+                  </div>
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" name="product" id="chokers">
+                    <label for="chokers">Chokers</label>
+                  </div>
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" name="product" id="rings">
+                    <label for="rings">Rings</label>
+                  </div>
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" name="product" id="earrings">
+                    <label for="earrings">Earrings</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter">
+                <a class="filter__button"><h2 class="filter__title">Material</h2></a>
+                <div class="filter__content">
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" name="material" id="gold">
+                    <label for="gold">Gold</label>
+                  </div>
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" name="material" id="silver">
+                    <label for="silver">Silver</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter">
+                <a class="filter__button"><h2 class="filter__title">Collection</h2></a>
+                <div class="filter__content">
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" name="collection" id="flamingo">
+                    <label for="flamingo">Pink flamingo</label>
+                  </div>
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" name="collection" id="dreams">
+                    <label for="dreams">Dreams</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter">
+                <a class="filter__button"><h2 class="filter__title">Price</h2></a>
+                <div class="filter__content">
+                  <input type="text" readonly="" value="50$">
+                  <input type="text" readonly="" value="55$">
+                </div>
+              </div>
+
+              <button class="filters__apply" type="submit">Apply</button>
+              <button class="filters__reset" type="reset">Clear All</button>
+            </div>
+          </form>
+        </section>
+        <section class="catalog__cards cards">
+          <ul class="cards__list">
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-1@1x.webp 1x, img/catalog/catalog-1@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-1@1x.jpg" srcset="img/catalog/catalog-1@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Double pearl earrings</p>
+              <p class="card__price">$ 115</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-2@1x.webp 1x, img/catalog/catalog-2@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-2@1x.jpg" srcset="img/catalog/catalog-2@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Choker with gold bead</p>
+              <p class="card__price">$ 55</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-3@1x.webp 1x, img/catalog/catalog-3@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-3@1x.jpg" srcset="img/catalog/catalog-3@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Gold layered necklace</p>
+              <p class="card__price">$ 155</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-4@1x.webp 1x, img/catalog/catalog-4@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-4@1x.jpg" srcset="img/catalog/catalog-4@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Blue gemstone pendant</p>
+              <p class="card__price">$ 105</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-5@1x.webp 1x, img/catalog/catalog-5@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-5@1x.jpg" srcset="img/catalog/catalog-5@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Boho earrings</p>
+              <p class="card__price">$ 75</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-6@1x.webp 1x, img/catalog/catalog-6@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-6@1x.jpg" srcset="img/catalog/catalog-6@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Gold bird necklace</p>
+              <p class="card__price">$ 135</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-7@1x.webp 1x, img/catalog/catalog-7@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-7@1x.jpg" srcset="img/catalog/catalog-7@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Black leather choker</p>
+              <p class="card__price">$ 85</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/necklace-desktop@1x.webp 1x, img/catalog/necklace-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/necklace-desktop@1x.jpg" srcset="img/catalog/necklace-desktop@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Necklace with amethyst</p>
+              <p class="card__price">$ 145</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-9@1x.webp 1x, img/catalog/catalog-9@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-9@1x.jpg" srcset="img/catalog/catalog-9@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Elephant earrings</p>
+              <p class="card__price">$ 95</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-10@1x.webp 1x, img/catalog/catalog-10@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-10@1x.jpg" srcset="img/catalog/catalog-10@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Threader necklace</p>
+              <p class="card__price">$ 115</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-11@1x.webp 1x, img/catalog/catalog-11@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-11@1x.jpg" srcset="img/catalog/catalog-11@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Origami crane necklace</p>
+              <p class="card__price">$ 105</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+            <li class="cards__item card">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-12@1x.webp 1x, img/catalog/catalog-12@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 272px -->
+                <img src="img/catalog/catalog-12@1x.jpg" srcset="img/catalog/catalog-12@2x.jpg 2x" alt="Украшения на белом столе" class="blog__img" width="270" height="272" loading="lazy">
+              </picture>
+              <p class="card__title">Marble earrings</p>
+              <p class="card__price">$ 95</p>
+              <a href="#" class="card__link"><span class="visually-hidden">Подробнее о товаре</span></a>
+            </li>
+          </ul>
+
+          <a href="#" class="filters__link">Previous</a>
+          <a href="#" class="filters__link">Next</a>
+
+          <ul class="filters__pagination">
+            <li class="filters__pagination-item filters__pagination-item--active">1</li>
+            <li class="filters__pagination-item">2</li>
+            <li class="filters__pagination-item">3</li>
+            <li class="filters__pagination-item">4</li>
+            <li class="filters__pagination-item">5</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="page__container">
+      <div class="footer__wrapper">
+        <div class="footer__email-block email-block">
+          <h2 class="email-block__title">The good stuff in your inbox</h2>
+          <p class="email-block__subtitle">News and updates from CH. No spam, we promise.</p>
+          <div class="email-block__input-wrapper">
+            <input type="email" class="email-block__input" placeholder="Your E-mail">
+            <a href="#" class="email-block__link"><span class="email-block__link-text">Sign Up</span></a>
+          </div>
+        </div>
+        <div class="footer__links links">
+          <ul class="footer__list links__list">
+            <li class="links__item"><a href="#" class="links__link">Ordering & Payment</a></li>
+            <li class="links__item"><a href="#" class="links__link">About CH</a></li>
+            <li class="links__item"><a href="#" class="links__link">Terms & Conditions</a></li>
+            <li class="links__item"><a href="#" class="links__link">Stores & Hours</a></li>
+            <li class="links__item"><a href="#" class="links__link">Returns & Exchanges</a></li>
+            <li class="links__item"><a href="#" class="links__link">Jobs</a></li>
+            <li class="links__item"><a href="#" class="links__link">Delivery</a></li>
+            <li class="links__item"><a href="#" class="links__link">Contact Us</a></li>
+          </ul>
+
+          <ul class="footer__social footer__list social">
+            <li class="social__item"><a href="#" class="social__link social__link--fb">Facebook</a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--insta">Instagram</a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--pinterest">Pinterest</a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--tw">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
