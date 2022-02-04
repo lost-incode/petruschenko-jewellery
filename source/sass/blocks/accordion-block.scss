@@ -1,0 +1,42 @@
+.accordion-block__button {
+  display: block;
+  border: none;
+  position: relative;
+  // width: 22px;
+  height: 28px;
+  padding: 50px 38px 20px 38px;
+}
+
+.accordion-block__button::after {
+  content: "";
+  display: block;
+  width: 16px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  right: 38px;
+}
+
+.accordion-block__button--show::after {
+  top: 50px;
+  transform: translateY(50%) rotate(180deg);
+  height: 16px;
+  background-image: url("../img/stack.svg#icon-link-more");
+}
+
+.accordion-block__button--hide::after {
+  top: 56px;
+  height: 16px;
+  transform: none;
+  background-image: url("../img/stack.svg#icon-link-more");
+}
+
+.accordion-block__content {
+  display: none;
+  padding: 0 38px 20px 38px;
+}
+
+.active {
+  display: block;
+}
