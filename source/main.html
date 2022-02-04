@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Jewellery</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper.min.css"/>
+  <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
 </head>
 <body class="page__body">
   <h1 class="visually-hidden">Главная страница</h1>
@@ -55,7 +57,99 @@
       <section class="new">
         <h2 class="page__title new__title">New In</h2>
         <p class="page__subtitle"><a class="page__link">Shop Now</a></p>
-        <!-- Здесь будет слайдер????????? -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/necklace-desktop@1x.webp 1x, img/catalog/necklace-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 284px -->
+                <img src="img/catalog/necklace-desktop@1x.jpg" srcset="img/catalog/necklace-desktop@2x.jpg 2x" alt="Подвеска фиолетовая" class="blog__img"  width="270" height="274" loading="lazy">
+              </picture>
+
+              <p class="swiper-slide__title">Necklace with amethyst</p>
+              <p class="swiper-slide__price">$ 145</p>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/main/choker-desktop@1x.webp 1x, img/main/choker-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 284px -->
+                <img src="img/main/choker-desktop@1x.jpg" srcset="img/main/choker-desktop@2x.jpg 2x" alt="Чокер" class="blog__img"  width="270" height="274" loading="lazy">
+              </picture>
+
+              <p class="swiper-slide__title">Layered сhoker</p>
+              <p class="swiper-slide__price">$ 115</p>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/main/gold-chain-desktop@1x.webp 1x, img/main/gold-chain-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 284px -->
+                <img src="img/main/gold-chain-desktop@1x.jpg" srcset="img/main/gold-chain-desktop@2x.jpg 2x" alt="Золотая цепочка" class="blog__img"  width="270" height="274" loading="lazy">
+              </picture>
+
+              <p class="swiper-slide__title">Gold chain</p>
+              <p class="swiper-slide__price">$ 215</p>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/main/galaxy-earrings-desktop@1x.webp 1x, img/main/galaxy-earrings-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 284px -->
+                <img src="img/main/galaxy-earrings-desktop@1x.jpg" srcset="img/main/galaxy-earrings-desktop@2x.jpg 2x" alt="Серьги Вселенная" class="blog__img"  width="270" height="274" loading="lazy">
+              </picture>
+
+              <p class="swiper-slide__title">Galaxy earrings</p>
+              <p class="swiper-slide__price">$ 95</p>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/necklace-desktop@1x.webp 1x, img/catalog/necklace-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 284px -->
+                <img src="img/catalog/necklace-desktop@1x.jpg" srcset="img/catalog/necklace-desktop@2x.jpg 2x" alt="Подвеска фиолетовая" class="blog__img"  width="270" height="274" loading="lazy">
+              </picture>
+
+              <p class="swiper-slide__title">Necklace with amethyst</p>
+              <p class="swiper-slide__price">$ 145</p>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/necklace-desktop@1x.webp 1x, img/catalog/necklace-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 284px -->
+                <img src="img/catalog/necklace-desktop@1x.jpg" srcset="img/catalog/necklace-desktop@2x.jpg 2x" alt="Подвеска фиолетовая" class="blog__img"  width="270" height="274" loading="lazy">
+              </picture>
+
+              <p class="swiper-slide__title">Necklace with amethyst</p>
+              <p class="swiper-slide__price">$ 145</p>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/necklace-desktop@1x.webp 1x, img/catalog/necklace-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 284px -->
+                <img src="img/catalog/necklace-desktop@1x.jpg" srcset="img/catalog/necklace-desktop@2x.jpg 2x" alt="Подвеска фиолетовая" class="blog__img"  width="270" height="274" loading="lazy">
+              </picture>
+
+              <p class="swiper-slide__title">Necklace with amethyst</p>
+              <p class="swiper-slide__price">$ 145</p>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/catalog/necklace-desktop@1x.webp 1x, img/catalog/necklace-desktop@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 284px -->
+                <img src="img/catalog/necklace-desktop@1x.jpg" srcset="img/catalog/necklace-desktop@2x.jpg 2x" alt="Подвеска фиолетовая" class="blog__img"  width="270" height="274" loading="lazy">
+              </picture>
+
+              <p class="swiper-slide__title">Necklace with amethyst</p>
+              <p class="swiper-slide__price">$ 145</p>
+            </div>
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- navigation buttons -->
+        </div>
       </section>
 
       <section class="blog">
@@ -237,15 +331,57 @@
           </ul>
 
           <ul class="footer__social footer__list social">
-            <li class="social__item"><a href="#" class="social__link">Facebook</a></li>
-            <li class="social__item"><a href="#" class="social__link">Instagram</a></li>
-            <li class="social__item"><a href="#" class="social__link">Pinterest</a></li>
-            <li class="social__item"><a href="#" class="social__link">Twitter</a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--fb">Facebook</a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--insta">Instagram</a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--pinterest">Pinterest</a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--tw">Twitter</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
+  <script type="module">
+    import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js';
+
+    const swiper = new Swiper('.swiper', {
+      speed: 400,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 20
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 30
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+      grid: {
+        fill: 'column',
+      },
+    });
+
+    console.log('swiper', swiper);
+  </script>
   <script src="js/script.js"></script>
 </body>
 </html>

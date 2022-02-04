@@ -2,6 +2,37 @@
   margin-bottom: 30px;
 }
 
-.social__item {
+.social__link {
   padding-left: 30px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color: $basic-white;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+  }
+}
+
+.social__link--fb::before {
+  width: 8px;
+  mask-image: url("../img/stack.svg#icon-fb");
+}
+
+.social__link--insta::before {
+  mask-image: url("../img/stack.svg#icon-insta");
+}
+
+.social__link--pinterest::before {
+  mask-image: url("../img/stack.svg#icon-pinterest");
+}
+
+.social__link--tw::before {
+  mask-image: url("../img/stack.svg#icon-tw");
 }

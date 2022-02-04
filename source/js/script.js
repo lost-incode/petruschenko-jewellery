@@ -15,7 +15,7 @@
 // });
 
 
-var body = document.querySelector('.page__body');
+// var body = document.querySelector('.page__body');
 var accordionBlocks = document.querySelectorAll('.accordion-block');
 var accordionTitleWrappers = document.querySelectorAll('.accordion__wrapper');
 
