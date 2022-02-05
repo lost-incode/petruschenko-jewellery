@@ -15,7 +15,7 @@
 // });
 
 
-var body = document.querySelector('.page__body');
+// var body = document.querySelector('.page__body');
 var accordionBlocks = document.querySelectorAll('.accordion-block');
 var accordionTitleWrappers = document.querySelectorAll('.accordion__wrapper');
 
@@ -57,4 +57,23 @@ if (accordionBlocks) {
       });
     });
   });
+}
+
+// Скрипт для открытия/закрытия фильтров на странице каталога
+var filters = document.querySelectorAll('.filter');
+
+if (filters) {
+  filters.forEach(function (filter) {
+    var filterButton = filter.querySelector('.filter__button');
+    var filterContent = filter.querySelector('.filter__content');
+    // Изначально фильтры без js открыты, скрываем их
+    filterContent.classList.add('visually-hidden');
+    filterButton.classList.add('filter__button--hide');
+
+    filterButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      filterContent.classList.toggle('visually-hidden');
+      filterButton.classList.toggle('filter__button--hide');
+    });
+  })
 }

@@ -12,7 +12,10 @@
   line-height: 130%;
   color: $basic-dark;
   margin: 0;
-  margin-bottom: 30px;
+}
+
+.filter__content {
+  margin-top: 30px;
 }
 
 .filter__checkbox-wrapper label {
@@ -47,11 +50,14 @@
   margin-bottom: 15px;
 }
 
-.filter__button .filter__title {
+.filter__button {
   position: relative;
+  cursor: pointer;
+  display: block;
+  width: 100%;
 }
 
-.filter__button .filter__title::after {
+.filter__button::after {
   content: "";
   display: block;
   width: 16px;
@@ -61,13 +67,12 @@
   background-position: center;
   right: 0;
   top: 0;
-  transform: translateY(50%) rotate(180deg);
   height: 16px;
   background-image: url("../img/stack.svg#icon-link-more");
 }
 
-.filter__button--hide .filter__title::after {
+.filter__button--hide::after {
   height: 16px;
-  transform: none;
+  transform: translateY(50%) rotate(180deg);
   background-image: url("../img/stack.svg#icon-link-more");
 }
