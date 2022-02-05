@@ -1,0 +1,60 @@
+.cards__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 44px;
+}
+
+.cards__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 40px 0;
+}
+
+.cards__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $basic-dark;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.cards__pagination {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards__pagination-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.cards__pagination-item a {
+  color: $basic-light;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.cards__pagination-item--active a {
+  color: $basic-dark;
+}

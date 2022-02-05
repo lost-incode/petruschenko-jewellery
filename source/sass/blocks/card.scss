@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $basic-dark;
+  margin: 0;
+}
+
+.card__price {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 130%;
+  color: $basic-dark;
+  margin: 0;
+}
