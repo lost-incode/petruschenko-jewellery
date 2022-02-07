@@ -1,0 +1,58 @@
+.range {
+  position: relative;
+  width: 100%;
+}
+
+.range__scale {
+  width: 100%;
+  height: 1px;
+  background-color: $light-bg-color;
+}
+
+.range__bar {
+  position: relative;
+  // top: -1px;
+  left: 50px;
+  width: 90px;
+  height: 1px;
+  background-color: $basic-brown;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: $basic-brown;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  & input {
+    display: block;
+    width: min-content;
+    max-width: 40px;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: $basic-dark;
+    margin-top: 10px;
+  }
+}
+
+.range__toggle--min {
+  left: 0;
+}
+
+.range__toggle--max {
+  right: 0;
+}

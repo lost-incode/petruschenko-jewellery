@@ -75,5 +75,5 @@ if (filters) {
       filterContent.classList.toggle('visually-hidden');
       filterButton.classList.toggle('filter__button--hide');
     });
-  })
+  });
 }
