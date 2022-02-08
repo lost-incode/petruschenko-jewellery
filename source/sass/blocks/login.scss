@@ -1,0 +1,113 @@
+.login {
+  margin: 0 auto;
+  width: 430px;
+  min-height: 586px;
+  background-color: $light-bg-color;
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/login/login-img@1x.jpg");
+  margin-top: 100px;
+  padding: 198px 45px 60px 45px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.login__button-close {
+  position: absolute;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: $basic-dark;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 14px 14px;
+  mask-image: url("../img/stack.svg#icon-close");
+  border: none;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+
+  &:hover,
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    background-color: red;
+  }
+}
+
+.login__title {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+  color: $basic-dark;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.login__input-wrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__input-wrapper input{
+  display: block;
+  border: none;
+  border-bottom: 1px solid $basic-dark;
+  background-color: transparent;
+  padding-bottom: 9px;
+  width: 100%;
+}
+
+.login__input-wrapper input,
+.login__input-wrapper input::placeholder {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $basic-dark;
+}
+
+.login__input-wrapper input::placeholder {
+  color: $basic-light;
+}
+
+.login__link {
+  font-weight: 500;
+  text-decoration: none;
+  color: $basic-light;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  & span {
+    color: $basic-dark;
+  }
+}
+
+.login__link--s {
+  font-size: 12px;
+  line-height: 18px;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.login__link--m {
+  font-size: 14px;
+  line-height: 21px;
+  align-self: center;
+}
+
+.login__submit-button {
+  width: 340px;
+  margin-top: 50px;
+}
