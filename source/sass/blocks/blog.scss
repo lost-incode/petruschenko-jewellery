@@ -9,9 +9,10 @@
   grid-template-rows: repeat(2, 300px);
   column-gap: 30px;
   row-gap: 30px;
+  padding: 0;
 
   @media (max-width: $tablet-width-only) {
-    grid-template-columns: 1fr;
+    display: block;
   }
 }
 
@@ -19,6 +20,20 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: $light-bg-color;
+
+  @media (max-width: $tablet-width-only) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .blog__item--order {
