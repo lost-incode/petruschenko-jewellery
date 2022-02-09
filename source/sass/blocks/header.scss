@@ -7,6 +7,38 @@
   }
 }
 
+.header__burger-button {
+  position: fixed;
+  transform: scale(0);
+
+  @media (max-width: $tablet-width-only) {
+    position: static;
+    transform: none;
+    // position: absolute;
+    display: block;
+    width: 25px;
+    height: 16px;
+    background-color: $basic-dark;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 25px 16px;
+    mask-image: url("../img/stack.svg#menu-burger");
+    border: none;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+
+    &:hover,
+    &:active {
+      opacity: 0.5;
+    }
+
+    &:focus-visible {
+      background-color: #ff0000;
+    }
+  }
+}
+
 .header__wrapper {
   display: grid;
   grid-template-columns: 1fr 66px 1fr;
@@ -24,6 +56,10 @@
     bottom: 0;
     left: -200%;
     background-color: $line-color;
+
+    @media (max-width: $tablet-width-only) {
+      content: none;
+    }
   }
 }
 
@@ -47,12 +83,21 @@
   position: absolute;
   left: 0;
   top: 47px;
+
+  @media (max-width: $tablet-width-only) {
+    position: relative;
+    top: 0;
+  }
 }
 
 .header__user {
   position: absolute;
   right: 60px;
   top: 54px;
+
+  @media (max-width: $tablet-width-only) {
+    position: static;
+  }
 }
 
 .header__menu-link {
@@ -70,8 +115,75 @@
   &:focus-visible {
     outline: 2px solid $basic-brown;
   }
+
+  @media (max-width: $tablet-width-only) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $basic-white;
+
+    &--login {
+      font-size: 18px;
+      line-height: 130%;
+    }
+  }
 }
 
 .header__nav {
-  margin: 18px 0;
+  padding: 18px 0;
+
+  // @media (max-width: $tablet-width-only) {
+  //   margin-top: -2px;
+  // }
+}
+
+.header__cart-text {
+  @media (max-width: $tablet-width-only) {
+    position: fixed;
+    transform: scale(0);
+  }
+}
+
+.header__cart-link {
+  @media (max-width: $tablet-width-only) {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 18px;
+    height: 16px;
+    background-color: $basic-dark;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-image: url("../img/stack.svg#icon-cart");
+  }
+}
+
+.header--open-menu {
+  @media (max-width: $tablet-width-only) {
+    background-color: $basic-brown;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    // overflow: auto;
+
+    & .header__logo path {
+      fill: $basic-white;
+    }
+
+    & .header__burger-button {
+      background-color: $basic-white;
+    }
+
+    & .header__cart-link {
+      background-color: $basic-white;
+    }
+
+    & .nav {
+      background-color: $basic-brown;
+    }
+  }
 }

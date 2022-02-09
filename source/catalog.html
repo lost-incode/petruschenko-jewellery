@@ -41,7 +41,7 @@
             <li class="nav__item menu-info__item header__menu-link"><a href="#" class="menu-info__link">Contact Us</a></li>
           </ul>
 
-          <a href="log-in.html" class="header__user nav__user header__menu-link">Login</a>
+          <a href="log-in.html" class="header__user nav__user header__menu-link header__menu-link--login">Login</a>
         </div>
       </nav>
     </div>
@@ -307,6 +307,29 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal modal--close">
+    <!-- Кнопка для закрытия по нажатию на фон за модалкой -->
+    <button class="modal__button-close-window"><span class="visually-hidden">Закрыть модальное окно</span></button>
+    <div class="modal__wrapper modal__wrapper--window">
+      <div class="login">
+        <button class="login__button-close modal__button-close" tabindex="1"><span class="visually-hidden">Закрыть модальное окно</span></button>
+        <h2 class="login__title">Log In</h2>
+        <form action="">
+          <div class="login__input-wrapper">
+            <input type="text" name="email" placeholder="Your E-mail">
+          </div>
+          <div class="login__input-wrapper">
+            <input type="password" name="password" placeholder="Password">
+            <a href="#" class="login__link login__link--s">Forgot your password?</a>
+          </div>
+          <button type="submit" class="submit-button login__submit-button">Log In</button>
+        </form>
+        <a href="#" class="login__link login__link--m">Don’t have an account? <span>Sign up</span></a>
+      </div>
+    </div>
+  </div>
+
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,21 +1,19 @@
 'use strict';
-// var pageHeader = document.querySelector('.page-header');
-// var headerToggle = document.querySelector('.page-header__toggle');
+var header = document.querySelector('.header');
+var nav = header.querySelector('.nav');
+var body = document.querySelector('.page__body');
 
-// pageHeader.classList.remove('page-header--nojs');
+var headerMenuButton = document.querySelector('.header__burger-button');
 
-// headerToggle.addEventListener('click', function () {
-//   if (pageHeader.classList.contains('page-header--closed')) {
-//     pageHeader.classList.remove('page-header--closed');
-//     pageHeader.classList.add('page-header--opened');
-//   } else {
-//     pageHeader.classList.add('page-header--closed');
-//     pageHeader.classList.remove('page-header--opened');
-//   }
-// });
+nav.classList.remove('nav--nojs');
 
+headerMenuButton.addEventListener('click', function () {
+  header.classList.toggle('header--open-menu');
+  nav.classList.toggle('nav--closed');
+  nav.classList.toggle('nav--opened');
+  body.classList.toggle('overflow-hidden');
+});
 
-// var body = document.querySelector('.page__body');
 var accordionBlocks = document.querySelectorAll('.accordion-block');
 var accordionTitleWrappers = document.querySelectorAll('.accordion__wrapper');
 
@@ -77,3 +75,55 @@ if (filters) {
     });
   });
 }
+
+// Скрипт для открытия и закрытия модального окна
+
+var modalLink = document.querySelector('.header__menu-link--login');
+
+var modalWindow = document.querySelector('.modal');
+var modalClose = modalWindow.querySelector('.modal__button-close');
+var modalCloseWindow = modalWindow.querySelector('.modal__button-close-window');
+
+var closeModal = function () {
+  modalWindow.classList.remove('modal--open');
+  body.classList.remove('overflow-hidden');
+};
+
+document.addEventListener('focus', function (evt) {
+  if (modalWindow.classList.contains('modal--open') && !modalWindow.contains(evt.target)) {
+    evt.stopPropagation();
+    modalWindow.focus({preventScroll: true});
+  }
+}, true);
+
+var openModal = function () {
+  modalWindow.classList.add('modal--open');
+  body.classList.add('overflow-hidden');
+  modalWindow.setAttribute('tabindex', '0');
+};
+
+document.addEventListener('keyup', function (evt) {
+  if (evt.defaultPrevented) {
+    return;
+  }
+
+  var key = evt.key;
+
+  if (key === 'Escape' || key === 'Esc') {
+    closeModal();
+  }
+});
+
+modalClose.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  closeModal();
+});
+
+modalCloseWindow.addEventListener('click', function () {
+  closeModal();
+});
+
+modalLink.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  openModal();
+});

@@ -35,17 +35,19 @@
     position: relative;
   }
 
-  // &--desktop_on {
-  //   @media (max-width: ($desktop-width - 1px)) {
-  //     display: contents;
-  //   }
-  // }
+  &--desktop-on {
+    @media (max-width: $tablet-width-only) {
+      // position: static;
+      display: contents;
+      // width: 100%;
+    }
+  }
 
-  // &--desktop_off {
-  //   @media (min-width: $desktop-width) {
-  //     display: contents;
-  //   }
-  // }
+  &--desktop-off {
+    @media (min-width: $desktop-width) {
+      display: contents;
+    }
+  }
 }
 
 .page__title {

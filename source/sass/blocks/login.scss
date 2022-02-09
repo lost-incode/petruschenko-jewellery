@@ -36,7 +36,7 @@
   }
 
   &:focus-visible {
-    background-color: red;
+    background-color: #ff0000;
   }
 }
 
@@ -58,7 +58,7 @@
   flex-direction: column;
 }
 
-.login__input-wrapper input{
+.login__input-wrapper input {
   display: block;
   border: none;
   border-bottom: 1px solid $basic-dark;
