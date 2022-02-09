@@ -1,3 +1,9 @@
+.social {
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+  }
+}
+
 .social__item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -17,6 +23,12 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
+  }
+}
+
+.social__link-text {
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
 

@@ -21,6 +21,10 @@
   display: grid;
   grid-template-columns: 2.8fr 1fr;
   column-gap: 87px;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
 }
 
 .footer__list {

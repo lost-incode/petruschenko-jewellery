@@ -3,6 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 67px;
   row-gap: 30px;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
 }
 
 .links__item {
