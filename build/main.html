@@ -390,25 +390,33 @@
         320: {
           slidesPerView: 2,
           slidesPerGroup: 2,
-          spaceBetween: 20
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            type: "fraction",
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '">' + (currentClass + 1) + '</span> of <span class="' +  totalClass + '">'+ (totalClass + 1) + '</span';
+                console.log(currentClass);
+            },
+          },
         },
         // when window width is >= 768px
-        1023: {
+        1024: {
           slidesPerView: 4,
           slidesPerGroup: 4,
-          spaceBetween: 30
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+          },
         }
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
       },
       grid: {
         fill: 'column',
