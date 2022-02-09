@@ -124,14 +124,6 @@
   }
 }
 
-.header__nav {
-  padding: 18px 0;
-
-  // @media (max-width: $tablet-width-only) {
-  //   margin-top: -2px;
-  // }
-}
-
 .header__cart-text {
   @media (max-width: $tablet-width-only) {
     position: fixed;
@@ -179,6 +171,14 @@
 
     & .nav {
       background-color: $basic-brown;
+    }
+
+    & .header__nav {
+      padding: 18px 0;
+
+      // @media (max-width: $tablet-width-only) {
+      //   margin-top: -2px;
+      // }
     }
   }
 }

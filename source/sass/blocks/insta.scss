@@ -11,9 +11,24 @@
   grid-template-rows: 230px 150px;
   column-gap: 27px;
   row-gap: 34px;
+
+  @media (max-width: $tablet-width-only) {
+    grid-template-columns: 133px 231px 133px 133px;
+    grid-template-rows: 133px 87px;
+    column-gap: 16px;
+    row-gap: 20px;
+  }
 }
 
 .insta__item--rows {
   grid-column: 2;
   grid-row: 1 / -1;
+}
+
+.insta__link img {
+  @media (max-width: $tablet-width-only) {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
