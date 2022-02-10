@@ -1,7 +1,7 @@
 .desktop-off {
   display: none;
 
-  @media (max-width: $desktop-width) {
+  @media (max-width: $tablet-width-only) {
     display: block;
   }
 }

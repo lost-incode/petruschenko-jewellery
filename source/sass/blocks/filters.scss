@@ -1,6 +1,33 @@
 .filters__content {
   border: 1px solid $basic-brown;
   margin-bottom: 35px;
+
+  @media (max-width: $tablet-width-only) {
+    background-color: $basic-white;
+    width: 100%;
+  }
+}
+
+.filters__wrapper form {
+  @media (max-width: $tablet-width-only) {
+    width: 470px;
+    position: fixed;
+    overflow-y: auto;
+    display: block;
+    max-height: calc(100vh - 20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -43%);
+    z-index: 10;
+    background-color: $basic-white;
+    padding-bottom: 89px;
+  }
+}
+
+.filters__wrapper--close {
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
 }
 
 .filters__apply {
@@ -24,4 +51,20 @@
   &:hover {
     opacity: 0.5;
   }
+}
+
+.filters__link {
+  text-decoration: none;
+}
+
+.filters__button-close-window {
+  background: $basic-black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9;
+  border: none;
 }

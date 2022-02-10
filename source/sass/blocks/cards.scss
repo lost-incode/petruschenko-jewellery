@@ -6,6 +6,15 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: 30px;
   row-gap: 44px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 50px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .cards__nav {

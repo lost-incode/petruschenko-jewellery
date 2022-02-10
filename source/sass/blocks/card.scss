@@ -4,12 +4,25 @@
   align-items: center;
 }
 
+.card img {
+  @media (max-width: $tablet-width-only) {
+    width: 206px;
+    height: 208px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 130px;
+    height: 136px;
+  }
+}
+
 .card__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
   color: $basic-dark;
   margin: 0;
+  text-align: center;
 }
 
 .card__price {
