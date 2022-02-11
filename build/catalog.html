@@ -66,85 +66,87 @@
         <section class="catalog__filters filters">
           <a href="#" class="submit-button desktop-off filters__link">Filters</a>
 
-          <div class="filters__wrapper filters__wrapper--close">
+          <div class="filters__wrapper">
             <button class="desktop-off filters__button-close-window"><span class="visually-hidden">Закрыть модальное окно</span></button>
-            <button class="desktop-off filters__button-close" tabindex="1"><span class="visually-hidden">Закрыть модальное окно</span></button>
 
-            <form action="">
-              <div class="filters__content">
-                <div class="filter">
-                  <a class="filter__button"><h2 class="filter__title">Product</h2></a>
-                  <div class="filter__content">
-                    <div class="filter__checkbox-wrapper">
-                      <input type="checkbox" name="product" id="necklaces" class="visually-hidden">
-                      <label for="necklaces">Necklaces</label>
-                    </div>
-                    <div class="filter__checkbox-wrapper">
-                      <input type="checkbox" name="product" id="chokers" class="visually-hidden">
-                      <label for="chokers">Chokers</label>
-                    </div>
-                    <div class="filter__checkbox-wrapper">
-                      <input type="checkbox" name="product" id="rings" class="visually-hidden">
-                      <label for="rings">Rings</label>
-                    </div>
-                    <div class="filter__checkbox-wrapper">
-                      <input type="checkbox" name="product" id="earrings" class="visually-hidden">
-                      <label for="earrings">Earrings</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="filter">
-                  <a class="filter__button"><h2 class="filter__title">Material</h2></a>
-                  <div class="filter__content">
-                    <div class="filter__checkbox-wrapper">
-                      <input type="checkbox" name="material" id="gold" class="visually-hidden">
-                      <label for="gold">Gold</label>
-                    </div>
-                    <div class="filter__checkbox-wrapper">
-                      <input type="checkbox" name="material" id="silver" class="visually-hidden">
-                      <label for="silver">Silver</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="filter">
-                  <a class="filter__button"><h2 class="filter__title">Collection</h2></a>
-                  <div class="filter__content">
-                    <div class="filter__checkbox-wrapper">
-                      <input type="checkbox" name="collection" id="flamingo" class="visually-hidden">
-                      <label for="flamingo">Pink flamingo</label>
-                    </div>
-                    <div class="filter__checkbox-wrapper">
-                      <input type="checkbox" name="collection" id="dreams" class="visually-hidden">
-                      <label for="dreams">Dreams</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="filter">
-                  <a class="filter__button"><h2 class="filter__title">Price</h2></a>
-                  <div class="filter__content">
-                    <div class="range">
-                      <div class="range__scale">
-                        <div class="range__bar"></div>
+            <div class="filters__form-wrapper">
+              <button class="desktop-off filters__button-close" tabindex="1"><span class="visually-hidden">Закрыть модальное окно</span></button>
+              <form action="">
+                <div class="filters__content">
+                  <div class="filter">
+                    <a class="filter__button"><h2 class="filter__title">Product</h2></a>
+                    <div class="filter__content">
+                      <div class="filter__checkbox-wrapper">
+                        <input type="checkbox" name="product" id="necklaces" class="visually-hidden">
+                        <label for="necklaces">Necklaces</label>
                       </div>
-                      <div class="range__toggles">
-                        <div class="range__toggle range__toggle--min">
-                          <input type="text" readonly="" value="$ 55">
-                        </div>
-                        <div class="range__toggle range__toggle--max">
-                          <input type="text" readonly="" value="$ 155">
-                        </div>
+                      <div class="filter__checkbox-wrapper">
+                        <input type="checkbox" name="product" id="chokers" class="visually-hidden">
+                        <label for="chokers">Chokers</label>
+                      </div>
+                      <div class="filter__checkbox-wrapper">
+                        <input type="checkbox" name="product" id="rings" class="visually-hidden">
+                        <label for="rings">Rings</label>
+                      </div>
+                      <div class="filter__checkbox-wrapper">
+                        <input type="checkbox" name="product" id="earrings" class="visually-hidden">
+                        <label for="earrings">Earrings</label>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <button class="submit-button filters__apply" type="submit">Apply</button>
-              <button class="filters__reset" type="reset">Clear All</button>
-            </form>
+                  <div class="filter">
+                    <a class="filter__button"><h2 class="filter__title">Material</h2></a>
+                    <div class="filter__content">
+                      <div class="filter__checkbox-wrapper">
+                        <input type="checkbox" name="material" id="gold" class="visually-hidden">
+                        <label for="gold">Gold</label>
+                      </div>
+                      <div class="filter__checkbox-wrapper">
+                        <input type="checkbox" name="material" id="silver" class="visually-hidden">
+                        <label for="silver">Silver</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter">
+                    <a class="filter__button"><h2 class="filter__title">Collection</h2></a>
+                    <div class="filter__content">
+                      <div class="filter__checkbox-wrapper">
+                        <input type="checkbox" name="collection" id="flamingo" class="visually-hidden">
+                        <label for="flamingo">Pink flamingo</label>
+                      </div>
+                      <div class="filter__checkbox-wrapper">
+                        <input type="checkbox" name="collection" id="dreams" class="visually-hidden">
+                        <label for="dreams">Dreams</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter">
+                    <a class="filter__button"><h2 class="filter__title">Price</h2></a>
+                    <div class="filter__content">
+                      <div class="range">
+                        <div class="range__scale">
+                          <div class="range__bar"></div>
+                        </div>
+                        <div class="range__toggles">
+                          <div class="range__toggle range__toggle--min">
+                            <input type="text" readonly="" value="$ 55">
+                          </div>
+                          <div class="range__toggle range__toggle--max">
+                            <input type="text" readonly="" value="$ 155">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="submit-button filters__apply" type="submit">Apply</button>
+                <button class="filters__reset" type="reset">Clear All</button>
+              </form>
+            </div>
           </div>
         </section>
         <section class="catalog__cards cards">

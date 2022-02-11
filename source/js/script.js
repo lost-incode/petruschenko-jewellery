@@ -58,9 +58,27 @@ if (accordionBlocks) {
 }
 
 // Скрипт для открытия/закрытия фильтров на странице каталога
-var filters = document.querySelectorAll('.filter');
+var filtersSection = document.querySelector('.filters');
+var filtersLink = filtersSection.querySelector('.filters__link');
+var filtersModalWindow = filtersSection.querySelector('.filters__wrapper');
+var filtersModalClose = filtersSection.querySelector('.filters__button-close');
+var filtersModalCloseWindow = filtersSection.querySelector('.filters__button-close-window');
+var filtersApplyButton = filtersSection.querySelector('.filters__apply');
 
-if (filters) {
+var closeFiltersModal = function () {
+  filtersModalWindow.classList.remove('filters__wrapper--open');
+  body.classList.remove('overflow-hidden');
+};
+
+var openFiltersModal = function () {
+  filtersModalWindow.classList.add('filters__wrapper--open');
+  body.classList.add('overflow-hidden');
+  filtersModalWindow.setAttribute('tabindex', '0');
+};
+
+if (filtersSection) {
+  var filters = filtersSection.querySelectorAll('.filter');
+
   filters.forEach(function (filter) {
     var filterButton = filter.querySelector('.filter__button');
     var filterContent = filter.querySelector('.filter__content');
@@ -74,6 +92,29 @@ if (filters) {
       filterButton.classList.toggle('filter__button--hide');
     });
   });
+
+  if (window.screen.width < 1024) {
+    // Скрипт для открытия и закрытия модального окна фильтров
+    filtersModalClose.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closeFiltersModal();
+    });
+
+    filtersModalCloseWindow.addEventListener('click', function () {
+      closeFiltersModal();
+    });
+
+    filtersLink.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      openFiltersModal();
+    });
+
+    filtersApplyButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closeFiltersModal();
+    });
+  }
+
 }
 
 // Скрипт для открытия и закрытия модального окна
@@ -94,6 +135,10 @@ document.addEventListener('focus', function (evt) {
     evt.stopPropagation();
     modalWindow.focus({preventScroll: true});
   }
+  if (filtersModalWindow.classList.contains('filters__wrapper--open') && !filtersModalWindow.contains(evt.target)) {
+    evt.stopPropagation();
+    filtersModalWindow.focus({preventScroll: true});
+  }
 }, true);
 
 var openModal = function () {
@@ -111,6 +156,7 @@ document.addEventListener('keyup', function (evt) {
 
   if (key === 'Escape' || key === 'Esc') {
     closeModal();
+    closeFiltersModal();
   }
 });
 
