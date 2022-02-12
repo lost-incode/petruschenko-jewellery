@@ -7,6 +7,10 @@
   column-gap: 30px;
   row-gap: 44px;
 
+  @media (max-width: $desktop-maket-width) {
+    column-gap: 20px;
+  }
+
   @media (max-width: $tablet-width-only) {
     margin-top: 50px;
   }

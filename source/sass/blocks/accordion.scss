@@ -3,7 +3,7 @@
 }
 
 .accordion__section {
-  padding-bottom: 30px;
+  padding-bottom: 35px;
 }
 
 .accordion__section:not(:last-child) {
@@ -15,10 +15,26 @@
   font-size: 18px;
   line-height: 130%;
   margin: 0;
+
+  @media (max-width: $tablet-width-only) {
+    padding-left: 10px;
+  }
 }
 
 .accordion__text {
   max-width: 527px;
+  font-size: 16px;
+  line-height: 130%;
+  margin: 0;
+  padding-left: 10px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 20px;
+
+    & br {
+      display: none;
+    }
+  }
 }
 
 .accordion__wrapper {

@@ -5,7 +5,7 @@
 }
 
 .card img {
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: $desktop-maket-width) {
     width: 206px;
     height: 208px;
   }

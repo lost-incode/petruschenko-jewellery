@@ -1,4 +1,8 @@
 .new {
   position: relative;
-  margin-bottom: 130px;
+  margin-bottom: 115px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 60px;
+  }
 }

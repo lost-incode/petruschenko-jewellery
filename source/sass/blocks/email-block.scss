@@ -6,6 +6,9 @@
   letter-spacing: 0.03em;
   color: $basic-white;
   margin: 0;
+  margin-top: 3px;
+  margin-left: -5px;
+  margin-bottom: 10px;
 }
 
 .email-block__subtitle {
@@ -14,16 +17,20 @@
   line-height: 130%;
   color: $basic-light;
   margin: 0;
-  margin-bottom: 52px;
+  margin-bottom: 30px;
 }
 
 .email-block__input-wrapper {
   position: relative;
+
+  @media (max-width: $tablet-width-only) {
+    max-width: 560px;
+  }
 }
 
 .email-block__input {
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 0 10px 0;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $basic-white;
@@ -41,8 +48,8 @@
 .email-block__link {
   text-decoration: none;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 10px;
 
   &:hover {
     opacity: 0.5;
@@ -63,7 +70,7 @@
     width: 30px;
     height: 9px;
     top: 7px;
-    right: 0;
+    right: -10px;
     background-color: $basic-white;
     mask-repeat: no-repeat;
     mask-position: center;

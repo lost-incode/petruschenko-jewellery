@@ -1,11 +1,17 @@
 .social {
+  padding-top: 10px;
+
   @media (max-width: $mobile-width-only) {
     display: flex;
   }
 }
 
 .social__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 17px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 21px;
+  }
 }
 
 .social__link {
@@ -24,10 +30,15 @@
     mask-position: center;
     mask-size: cover;
   }
+
+  @media (max-width: $desktop-maket-width) {
+    display: flex;
+    width: max-content;
+  }
 }
 
 .social__link-text {
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
 }

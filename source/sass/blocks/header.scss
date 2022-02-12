@@ -7,7 +7,7 @@
   transform: scale(0);
 
   @media (max-width: $tablet-width-only) {
-    position: static;
+    position: relative;
     transform: none;
     // position: absolute;
     display: block;
@@ -16,10 +16,10 @@
     background-color: $basic-dark;
     mask-position: center;
     mask-repeat: no-repeat;
-    mask-size: 25px 16px;
+    mask-size: cover;
     mask-image: url("../img/stack.svg#menu-burger");
     border: none;
-    top: 0;
+    top: 25px;
     right: 0;
     box-sizing: border-box;
 
@@ -38,7 +38,7 @@
   display: grid;
   grid-template-columns: 1fr 66px 1fr;
   justify-content: flex-end;
-  align-items: center;
+  // align-items: center;
   padding: 30px 0 19px 0;
   position: relative;
 
@@ -49,12 +49,16 @@
     width: 200vw;
     height: 1px;
     bottom: 0;
-    left: -200%;
+    left: -100%;
     background-color: $line-color;
 
     @media (max-width: $tablet-width-only) {
       content: none;
     }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 30px;
   }
 }
 
@@ -72,33 +76,13 @@
 .header__cart {
   width: max-content;
   justify-self: flex-end;
-}
-
-.header__search {
-  position: absolute;
-  left: 0;
-  top: 47px;
-
-  @media (max-width: $tablet-width-only) {
-    position: relative;
-    top: 0;
-  }
-}
-
-.header__user {
-  position: absolute;
-  right: 60px;
-  top: 54px;
-
-  @media (max-width: $tablet-width-only) {
-    position: static;
-  }
+  margin-top: 10px;
 }
 
 .header__menu-link {
   color: $basic-dark;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 21px;
   text-decoration: none;
 
@@ -124,7 +108,33 @@
   }
 }
 
+.header__search {
+  position: absolute;
+  left: 0;
+  top: 40px;
+
+  @media (max-width: $tablet-width-only) {
+    position: relative;
+    top: 0;
+  }
+}
+
+.header__user {
+  position: absolute;
+  right: 80px;
+  top: 43px;
+  font-size: 14px;
+
+  @media (max-width: $tablet-width-only) {
+    position: static;
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+
 .header__cart-text {
+  font-size: 14px;
+
   @media (max-width: $tablet-width-only) {
     position: fixed;
     transform: scale(0);
@@ -140,6 +150,7 @@
     width: 18px;
     height: 16px;
     background-color: $basic-dark;
+    mask-size: cover;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-image: url("../img/stack.svg#icon-cart");
@@ -174,7 +185,7 @@
     }
 
     & .header__nav {
-      padding: 18px 0;
+      padding: 12px 0;
 
       // @media (max-width: $tablet-width-only) {
       //   margin-top: -2px;

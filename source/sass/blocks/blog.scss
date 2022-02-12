@@ -1,5 +1,9 @@
 .blog {
-  margin-bottom: 130px;
+  margin-bottom: 120px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 70px;
+  }
 }
 
 .blog__list {
@@ -11,21 +15,25 @@
   row-gap: 30px;
   padding: 0;
 
+  @media (max-width: $desktop-maket-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media (max-width: $tablet-width-only) {
-    display: block;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
   }
 }
 
 .blog__item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: $light-bg-color;
 
-  @media (max-width: $tablet-width-only) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
+  // @media (max-width: $tablet-width-only) {
+  //   &:not(:last-child) {
+  //     margin-bottom: 50px;
+  //   }
+  // }
 
   @media (max-width: $mobile-width-only) {
     display: block;
@@ -51,6 +59,24 @@
 }
 
 .blog__picture {
+  background-color: $light-bg-color;
+  width: 100%;
+  height: 300px;
+
+  @media (max-width: $desktop-maket-width) {
+    &:not(.blog__picture--main) {
+      max-width: 339px;
+      width: 100%;
+      height: 300px;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   @media (max-width: $tablet-width-only) {
     max-width: 339px;
     width: 100%;
@@ -72,9 +98,7 @@
 }
 
 .blog__picture--order {
-  @media (max-width: $tablet-width-only) {
-    order: 2;
-  }
+  order: 2;
 }
 
 .blog__article-wrapper {
@@ -82,7 +106,7 @@
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
 }
 
@@ -99,6 +123,13 @@
   line-height: 130%;
   color: $basic-light;
   margin: 0;
+  margin-top: 71px;
+
+  &--main {
+    @media (max-width: $tablet-width-only) {
+      margin-top: 85px;
+    }
+  }
 }
 
 .blog__title {
@@ -109,12 +140,20 @@
   line-height: 130%;
   color: $basic-black;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 35px;
+
+  &--main {
+    @media (max-width: $tablet-width-only) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .blog__link {
   text-decoration: none;
   border-bottom: 1px solid $basic-brown;
-  padding-bottom: 10px;
+  padding-bottom: 7px;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;

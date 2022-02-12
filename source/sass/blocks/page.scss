@@ -24,11 +24,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    width: 93vw;
   }
 
-  @media (min-width: $desktop-maket-width) {
-    width: $desktop-maket-width;
+  @media (min-width: ($desktop-maket-width)) {
+    width: $desktop-content-width;
   }
 
   &--relative {
@@ -58,7 +58,20 @@
   line-height: 130%;
   margin: 0;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+  letter-spacing: 0.03em;
+
+  &--blog {
+    margin-bottom: 17px;
+  }
+
+  &--insta {
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    margin: 0 0 17px;
+  }
 }
 
 .page__subtitle {
@@ -72,11 +85,16 @@
   margin-bottom: 60px;
 
   & a {
-    text-decoration: underline;
-    text-decoration-color: $basic-brown;
+    border-bottom: 1px solid $basic-brown;
+    // text-decoration: underline;
+    // text-decoration-color: $basic-brown;
   }
 
   & a:hover {
     opacity: 0.5;
+  }
+
+  &--blog {
+    margin-bottom: 65px;
   }
 }

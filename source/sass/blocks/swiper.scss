@@ -11,6 +11,13 @@
   width: 270px;
   height: 347px;
 
+  @media (max-width: $tablet-width-only) {
+    & img {
+      width: 324px;
+      height: 340px;
+    }
+  }
+
   @media (max-width: 767px) {
     & img {
       width: 130px;
@@ -24,7 +31,11 @@
   font-size: 16px;
   line-height: 130%;
   color: $basic-dark;
-  margin: 25px 0 15px 0;
+  margin: 15px 0 5px 0;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 10px;
+  }
 }
 
 .swiper-slide__price {
@@ -34,9 +45,13 @@
   color: $basic-dark;
   margin: 0;
 }
-//
+
 .swiper-pagination {
-  margin-top: 60px;
+  margin-top: 50px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 45px;
+  }
 
   @media (max-width: $mobile-width-only) {
     color: $basic-dark;
@@ -56,7 +71,7 @@
   color: $basic-light;
   background-color: transparent;
   cursor: pointer;
-  padding: 0 7.5px;
+  padding: 0 7px;
 }
 
 .swiper-pagination-bullet-active {
@@ -66,7 +81,7 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 0;
+  top: 45px;
   width: 30px;
   height: 10px;
   cursor: pointer;
