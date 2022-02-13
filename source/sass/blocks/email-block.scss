@@ -9,6 +9,10 @@
   margin-top: 3px;
   margin-left: -5px;
   margin-bottom: 10px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 0;
+  }
 }
 
 .email-block__subtitle {

@@ -6,6 +6,15 @@
   height: 28px;
   padding: 45px 38px 2px 38px;
   cursor: pointer;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 15px;
+    padding-left: 25px;
+    max-width: 206px;
+    padding-right: 50px;
+    display: block;
+    height: max-content;
+  }
 }
 
 .accordion-block__button::after {
@@ -24,6 +33,11 @@
     width: 23px;
     height: 12px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    right: 21px;
+    top: 25px;
+  }
 }
 
 .accordion-block__button--show::after {
@@ -39,6 +53,10 @@
 .accordion-block__content {
   display: none;
   padding: 0 38px 5px 38px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 25px;
+  }
 }
 
 .active {

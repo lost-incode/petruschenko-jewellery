@@ -24,6 +24,11 @@
   @media (max-width: $tablet-width-only) {
     margin-bottom: 70px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 195px;
+    margin-bottom: 62px;
+  }
 }
 
 .preview-block__title {
@@ -42,7 +47,8 @@
 
   @media (max-width: $mobile-width-only) {
     font-size: 38px;
-    line-height: 130%;
+    line-height: 100%;
+    margin-left: 0;
   }
 
   @media (max-width: $tablet-width-only) {
@@ -68,6 +74,7 @@
   @media (max-width: $mobile-width-only) {
     font-size: 34px;
     line-height: 130%;
+    margin-left: 0;
   }
 
   @media (max-width: $tablet-width-only) {

@@ -8,6 +8,10 @@
   @media (max-width: $tablet-width-only) {
     padding: 50px 0;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 40px;
+  }
 }
 
 .footer__wrapper {

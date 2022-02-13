@@ -4,6 +4,10 @@
   @media (max-width: $tablet-width-only) {
     margin-bottom: 80px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 74px;
+  }
 }
 
 .insta__list {

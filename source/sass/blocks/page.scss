@@ -84,10 +84,19 @@
   margin: 0;
   margin-bottom: 60px;
 
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 45px;
+  }
+
   & a {
     border-bottom: 1px solid $basic-brown;
     // text-decoration: underline;
     // text-decoration-color: $basic-brown;
+
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 5px;
+    }
   }
 
   & a:hover {
@@ -96,5 +105,9 @@
 
   &--blog {
     margin-bottom: 65px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 52px;
+    }
   }
 }
