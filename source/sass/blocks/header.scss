@@ -12,7 +12,7 @@
     // position: absolute;
     display: block;
     width: 25px;
-    height: 16px;
+    height: 20px;
     background-color: $basic-dark;
     mask-position: center;
     mask-repeat: no-repeat;
@@ -34,7 +34,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    top: 20px;
+    top: 15px;
   }
 }
 

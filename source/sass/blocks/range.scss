@@ -1,21 +1,48 @@
 .range {
   position: relative;
   width: 100%;
+  margin-top: 25px;
+  margin-bottom: 27px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 30px;
+  }
 }
 
 .range__scale {
   width: 100%;
   height: 1px;
   background-color: $light-bg-color;
+
+  @media (max-width: $tablet-width-only) {
+    width: 304px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 250px;
+  }
 }
 
 .range__bar {
   position: relative;
   // top: -1px;
   left: 50px;
-  width: 90px;
+  width: 100px;
   height: 1px;
   background-color: $basic-brown;
+
+  @media (max-width: $tablet-width-only) {
+    width: 180px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 120px;
+  }
 }
 
 .range__toggle {
@@ -29,6 +56,11 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablet-width-only) {
+    width: 18px;
+    height: 18px;
+  }
 
   &:hover {
     opacity: 0.5;
@@ -45,14 +77,35 @@
     font-size: 14px;
     line-height: 130%;
     color: $basic-dark;
-    margin-top: 10px;
+    margin-top: 23px;
+    margin-left: -10px;
+
+    @media (max-width: $tablet-width-only) {
+      font-size: 16px;
+    }
   }
 }
 
 .range__toggle--min {
-  left: 0;
+  left: 45px;
+
+  @media (max-width: $tablet-width-only) {
+    left: 50px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    left: 25px;
+  }
 }
 
 .range__toggle--max {
-  right: 0;
+  right: 35px;
+
+  @media (max-width: $tablet-width-only) {
+    right: 130px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    right: 45px;
+  }
 }

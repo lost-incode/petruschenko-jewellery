@@ -57,26 +57,53 @@ if (accordionBlocks) {
   });
 }
 
+// Скрипт для localStorage
+
+var modalForm = document.querySelector('.login form');
+var modalEmail = modalForm.querySelector('#email');
+
+var isStorageSupport = true;
+var storageModalEmail = '';
+
+try {
+  storageModalEmail = localStorage.getItem('modalEmail');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+window.addEventListener('load', function () {
+  if (storageModalEmail) {
+    modalEmail.value = storageModalEmail;
+  }
+});
+
+modalForm.addEventListener('submit', function () {
+  if (isStorageSupport) {
+    localStorage.setItem('modalEmail', modalEmail.value);
+  }
+});
+
 // Скрипт для открытия/закрытия фильтров на странице каталога
 var filtersSection = document.querySelector('.filters');
-var filtersLink = filtersSection.querySelector('.filters__link');
-var filtersModalWindow = filtersSection.querySelector('.filters__wrapper');
-var filtersModalClose = filtersSection.querySelector('.filters__button-close');
-var filtersModalCloseWindow = filtersSection.querySelector('.filters__button-close-window');
-var filtersApplyButton = filtersSection.querySelector('.filters__apply');
-
-var closeFiltersModal = function () {
-  filtersModalWindow.classList.remove('filters__wrapper--open');
-  body.classList.remove('overflow-hidden');
-};
-
-var openFiltersModal = function () {
-  filtersModalWindow.classList.add('filters__wrapper--open');
-  body.classList.add('overflow-hidden');
-  filtersModalWindow.setAttribute('tabindex', '0');
-};
 
 if (filtersSection) {
+  var filtersLink = filtersSection.querySelector('.filters__link');
+  var filtersModalWindow = filtersSection.querySelector('.filters__wrapper');
+  var filtersModalClose = filtersSection.querySelector('.filters__button-close');
+  var filtersModalCloseWindow = filtersSection.querySelector('.filters__button-close-window');
+  var filtersApplyButton = filtersSection.querySelector('.filters__apply');
+
+  var closeFiltersModal = function () {
+    filtersModalWindow.classList.remove('filters__wrapper--open');
+    body.classList.remove('overflow-hidden');
+  };
+
+  var openFiltersModal = function () {
+    filtersModalWindow.classList.add('filters__wrapper--open');
+    body.classList.add('overflow-hidden');
+    filtersModalWindow.setAttribute('tabindex', '0');
+  };
+
   var filters = filtersSection.querySelectorAll('.filter');
 
   filters.forEach(function (filter) {
@@ -115,6 +142,12 @@ if (filtersSection) {
     });
   }
 
+  document.addEventListener('focus', function (evt) {
+    if (filtersModalWindow.classList.contains('filters__wrapper--open') && !filtersModalWindow.contains(evt.target)) {
+      evt.stopPropagation();
+      filtersModalWindow.focus({preventScroll: true});
+    }
+  }, true);
 }
 
 // Скрипт для открытия и закрытия модального окна
@@ -135,16 +168,13 @@ document.addEventListener('focus', function (evt) {
     evt.stopPropagation();
     modalWindow.focus({preventScroll: true});
   }
-  if (filtersModalWindow.classList.contains('filters__wrapper--open') && !filtersModalWindow.contains(evt.target)) {
-    evt.stopPropagation();
-    filtersModalWindow.focus({preventScroll: true});
-  }
 }, true);
 
 var openModal = function () {
   modalWindow.classList.add('modal--open');
   body.classList.add('overflow-hidden');
   modalWindow.setAttribute('tabindex', '0');
+  modalEmail.focus();
 };
 
 document.addEventListener('keyup', function (evt) {

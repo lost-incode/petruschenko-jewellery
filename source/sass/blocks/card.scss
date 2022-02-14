@@ -22,7 +22,12 @@
   line-height: 130%;
   color: $basic-dark;
   margin: 0;
+  margin-top: 16px;
   text-align: center;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 6px;
+  }
 }
 
 .card__price {
@@ -31,4 +36,5 @@
   line-height: 130%;
   color: $basic-dark;
   margin: 0;
+  margin-top: 7px;
 }

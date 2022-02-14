@@ -1,10 +1,25 @@
 .filter {
-  padding: 25px 28px;
+  padding: 25px;
+  padding-bottom: 22px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-left: 40px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    border-bottom: 1px solid $basic-brown;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-bottom: 23px;
+  }
 }
 
 .filter:not(:last-child) {
   border-bottom: 1px solid $basic-brown;
 }
+
 
 .filter__title {
   font-weight: 500;
@@ -12,10 +27,18 @@
   line-height: 130%;
   color: $basic-dark;
   margin: 0;
+
+  @media (max-width: $tablet-width-only) {
+    font-size: 18px;
+  }
 }
 
 .filter__content {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+.filter__checkbox-wrapper {
+  margin-left: 7px;
 }
 
 .filter__checkbox-wrapper label {
@@ -23,6 +46,11 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
+
+  @media (max-width: $tablet-width-only) {
+    font-size: 16px;
+    padding-left: 30px;
+  }
 }
 
 .filter__checkbox-wrapper input + label {
@@ -38,16 +66,30 @@
   width: 14px;
   height: 14px;
   border: 1px solid $basic-brown;
+
+  @media (max-width: $tablet-width-only) {
+    width: 17px;
+    height: 17px;
+  }
 }
 
 .filter__checkbox-wrapper input:checked + label::before {
   width: 15px;
   height: 15px;
   background-color: $basic-brown;
+
+  @media (max-width: $tablet-width-only) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .filter__checkbox-wrapper:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 6px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__button {
@@ -69,10 +111,25 @@
   top: 0;
   height: 16px;
   background-image: url("../img/stack.svg#icon-link-more");
+
+  @media (max-width: $tablet-width-only) {
+    width: 25px;
+    height: 13px;
+    right: 17px;
+    top: 7px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    right: -1px;
+  }
 }
 
 .filter__button--hide::after {
   height: 16px;
   transform: translateY(50%) rotate(180deg);
   background-image: url("../img/stack.svg#icon-link-more");
+
+  @media (max-width: $tablet-width-only) {
+    top: -7px;
+  }
 }

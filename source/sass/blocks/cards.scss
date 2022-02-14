@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 30px;
-  row-gap: 44px;
+  row-gap: 33px;
 
   @media (max-width: $desktop-maket-width) {
     column-gap: 20px;
@@ -18,14 +18,20 @@
   @media (max-width: $mobile-width-only) {
     margin-top: 40px;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 28px;
   }
 }
 
 .cards__nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 40px 0;
+
+  @media (max-width: $mobile-width-only) {
+    justify-content: center;
+    margin-top: 5px;
+  }
 }
 
 .cards__link {
@@ -39,6 +45,10 @@
   &:hover {
     opacity: 0.5;
   }
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .cards__pagination {
@@ -47,15 +57,25 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  padding-right: 29px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-right: 0;
+  }
 }
 
 .cards__pagination-item {
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
+  width: min-content;
 
   &:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 14px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-right: 24px;
+    }
   }
 }
 
