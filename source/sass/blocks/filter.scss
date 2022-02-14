@@ -57,6 +57,12 @@
   position: relative;
 }
 
+.filter__checkbox-wrapper input {
+  &:focus-visible + label {
+    border: 3px solid $basic-brown;
+  }
+}
+
 .filter__checkbox-wrapper input + label::before {
   content: "";
   display: block;
@@ -70,6 +76,10 @@
   @media (max-width: $tablet-width-only) {
     width: 17px;
     height: 17px;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $basic-brown;
   }
 }
 
@@ -97,6 +107,8 @@
   cursor: pointer;
   display: block;
   width: 100%;
+  text-decoration: none;
+  color: $basic-dark;
 }
 
 .filter__button::after {

@@ -30,6 +30,7 @@
 
     &:focus-visible {
       background-color: #ff0000;
+      border: 5px solid $basic-black;
     }
   }
 
@@ -137,6 +138,10 @@
     position: relative;
     top: 0;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .header__user {
@@ -149,6 +154,12 @@
     position: static;
     font-size: 18px;
     line-height: 130%;
+  }
+}
+
+.header__user:focus-visible {
+  @media (max-width: $tablet-width-only) {
+    border: 3px solid $basic-white;
   }
 }
 
@@ -174,6 +185,11 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-image: url("../img/stack.svg#icon-cart");
+
+    &:focus-visible {
+      background-color: #ff0000;
+      border: 2px solid $basic-black;
+    }
   }
 
   @media (max-width: $mobile-width-only) {

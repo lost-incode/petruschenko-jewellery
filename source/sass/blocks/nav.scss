@@ -58,6 +58,12 @@
   }
 }
 
+.nav__link:focus-visible {
+  @media (max-width: $tablet-width-only) {
+    border: 3px solid $basic-white;
+  }
+}
+
 .nav__info {
   @media (max-width: $tablet-width-only) {
     margin-top: 35px;
@@ -82,7 +88,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: $basic-light;
+  color: $basic-dark;
   border: none;
 
   @media (max-width: $tablet-width-only) {
@@ -91,6 +97,8 @@
 }
 
 .nav__search input::placeholder {
+  color: $basic-light;
+
   @media (max-width: $tablet-width-only) {
     color: transparent;
   }
@@ -161,5 +169,6 @@
     display: flex;
     position: relative;
     height: max-content;
+    background-color: $basic-brown;
   }
 }

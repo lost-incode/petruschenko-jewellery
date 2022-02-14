@@ -6,6 +6,8 @@
   height: 28px;
   padding: 45px 38px 2px 38px;
   cursor: pointer;
+  text-decoration: none;
+  color: $basic-dark;
 
   @media (max-width: $mobile-width-only) {
     padding-top: 15px;

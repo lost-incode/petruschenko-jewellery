@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="украшения кольца серьги серебро">
   <title>Jewellery</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper.min.css">
@@ -23,7 +24,7 @@
           </svg>
         </a>
         <p class="header__cart">
-          <a class="header__cart-link header__menu-link" tabindex="1">
+          <a class="header__cart-link header__menu-link" href="#" tabindex="1">
             <span class="header__cart-text">Cart<span> 0</span></span>
           </a>
         </p>
@@ -64,7 +65,7 @@
     <div class="page__container">
       <section class="new">
         <h2 class="page__title new__title">New In</h2>
-        <p class="page__subtitle"><a class="page__link">Shop Now</a></p>
+        <p class="page__subtitle"><a class="page__link" href="#">Shop Now</a></p>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
         <!-- Slider main container -->
@@ -202,7 +203,7 @@
 
       <section class="blog">
         <h2 class="page__title page__title--blog">Blog</h2>
-        <p class="page__subtitle page__subtitle--blog"><a class="page__link">Read all</a></p>
+        <p class="page__subtitle page__subtitle--blog"><a class="page__link" href="#">Read all</a></p>
         <ul class="blog__list">
           <li class="blog__item">
             <div class="blog__picture">
@@ -253,7 +254,7 @@
         <h2 class="page__title">Frequently asked questions</h2>
         <div class="faq__accordion accordion">
           <div class="accordion__section accordion-block">
-            <a class="accordion__wrapper accordion-block__button">
+            <a class="accordion__wrapper accordion-block__button" href="#">
               <span class="accordion__title">What materials are the&nbsp;jewellery made of?</span>
             </a>
             <div class="accordion-block__content">
@@ -261,7 +262,7 @@
             </div>
           </div>
           <div class="accordion__section accordion-block">
-            <a class="accordion__wrapper accordion-block__button">
+            <a class="accordion__wrapper accordion-block__button" href="#">
               <span class="accordion__title">Which countries do&nbsp;you&nbsp;deliver to?</span>
             </a>
             <div class="accordion-block__content">
@@ -269,7 +270,7 @@
             </div>
           </div>
           <div class="accordion__section accordion-block">
-            <a class="accordion__wrapper accordion-block__button">
+            <a class="accordion__wrapper accordion-block__button" href="#">
               <span class="accordion__title">What are the payment&nbsp;methods?</span>
             </a>
             <div class="accordion-block__content">
@@ -277,7 +278,7 @@
             </div>
           </div>
           <div class="accordion__section accordion-block">
-            <a class="accordion__wrapper accordion-block__button">
+            <a class="accordion__wrapper accordion-block__button" href="#">
               <span class="accordion__title">Can I return the jewellery&nbsp;if&nbsp;it&nbsp;didn't fit me?</span>
             </a>
             <div class="accordion-block__content">
@@ -289,7 +290,7 @@
 
         <section class="insta">
           <h2 class="page__title page__title--insta">@Chjewellery</h2>
-          <p class="page__subtitle"><a class="page__link">Follow Us</a></p>
+          <p class="page__subtitle"><a class="page__link" href="#">Follow Us</a></p>
           <ul class="insta__list">
             <li class="insta__item">
               <a href="#" class="insta__link">
@@ -366,7 +367,7 @@
           <h2 class="email-block__title">The good stuff in&nbsp;your inbox</h2>
           <p class="email-block__subtitle">News and updates from CH. No&nbsp;spam, we promise.</p>
           <div class="email-block__input-wrapper">
-            <input type="email" class="email-block__input" placeholder="Your E-mail">
+            <input type="email" class="email-block__input" placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             <a href="#" class="email-block__link"><span class="email-block__link-text">Sign Up</span></a>
           </div>
         </div>
@@ -400,9 +401,9 @@
       <div class="login">
         <button class="login__button-close modal__button-close" tabindex="1"><span class="visually-hidden">Закрыть модальное окно</span></button>
         <h2 class="login__title">Log In</h2>
-        <form action="#">
+        <form action="https://echo.htmlacademy.ru/">
           <div class="login__input-wrapper">
-            <input type="text" name="email" id="email" placeholder="Your E-mail" required="">
+            <input type="text" name="email" id="email" placeholder="Your E-mail" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
           </div>
           <div class="login__input-wrapper">
             <input type="password" name="password" placeholder="Password" required="">

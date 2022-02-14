@@ -100,6 +100,10 @@
   background-color: transparent;
   padding-bottom: 9px;
   width: 100%;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .login__input-wrapper input,

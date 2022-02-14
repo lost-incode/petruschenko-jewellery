@@ -58,9 +58,29 @@
   display: flex;
   flex-wrap: wrap;
   padding-right: 29px;
+  position: relative;
 
   @media (max-width: $mobile-width-only) {
     padding-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200vw;
+    height: 1px;
+    top: -40px;
+    left: -1000%;
+    background-color: $line-color;
+
+    @media (max-width: $tablet-width-only) {
+      left: -400%;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      content: none;
+    }
   }
 }
 
