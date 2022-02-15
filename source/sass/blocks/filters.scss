@@ -25,7 +25,6 @@
     max-height: calc(100vh - 20px);
     top: 0;
     left: 0;
-    // transform: translate(-50%, -43%);
     z-index: 10;
     padding: 30px;
     background-color: $basic-white;
@@ -33,6 +32,9 @@
 
   @media (max-width: $mobile-width-only) {
     width: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -43%);
   }
 }
 
