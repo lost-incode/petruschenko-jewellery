@@ -23,12 +23,12 @@
     overflow-y: auto;
     display: block;
     max-height: calc(100vh - 20px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -43%);
+    top: 0;
+    left: 0;
+    // transform: translate(-50%, -43%);
     z-index: 10;
     padding: 30px;
-    background-color: transparent;
+    background-color: $basic-white;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -42,6 +42,7 @@
     background-color: $basic-white;
     padding-bottom: 89px;
     box-sizing: border-box;
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
   }
 
   @media (max-width: $mobile-width-only) {
