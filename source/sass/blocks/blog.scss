@@ -38,12 +38,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  // @media (max-width: $tablet-width-only) {
-  //   &:not(:last-child) {
-  //     margin-bottom: 50px;
-  //   }
-  // }
-
   @media (max-width: $mobile-width-only) {
     display: block;
     margin-bottom: 40px;

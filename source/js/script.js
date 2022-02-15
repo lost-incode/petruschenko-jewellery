@@ -48,11 +48,6 @@ if (accordionBlocks) {
     wrapper.addEventListener('click', function (evt) {
       evt.preventDefault();
       toggleAccordion(wrapper);
-
-      wrapper.addEventListener('click', function () {
-        evt.preventDefault();
-        toggleAccordion(wrapper);
-      });
     });
   });
 }

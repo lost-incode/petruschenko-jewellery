@@ -48,18 +48,13 @@ if (accordionBlocks) {
     wrapper.addEventListener('click', function (evt) {
       evt.preventDefault();
       toggleAccordion(wrapper);
-
-      wrapper.addEventListener('click', function () {
-        evt.preventDefault();
-        toggleAccordion(wrapper);
-      });
     });
   });
 }
 
 // Скрипт для localStorage
 
-var modalForm = document.querySelector('.login form')
+var modalForm = document.querySelector('.login form');
 var modalEmail = modalForm.querySelector('#email');
 
 var isStorageSupport = true;
@@ -77,11 +72,11 @@ window.addEventListener('load', function () {
   }
 });
 
-  modalForm.addEventListener('submit', function () {
-    if (isStorageSupport) {
-      localStorage.setItem('modalEmail', modalEmail.value);
-    }
-  });
+modalForm.addEventListener('submit', function () {
+  if (isStorageSupport) {
+    localStorage.setItem('modalEmail', modalEmail.value);
+  }
+});
 
 // Скрипт для открытия/закрытия фильтров на странице каталога
 var filtersSection = document.querySelector('.filters');
