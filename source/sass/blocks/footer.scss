@@ -3,7 +3,8 @@
   color: $basic-white;
   padding: 90px 0;
   justify-self: flex-end;
-  flex-grow: 1;
+  // flex-grow: 1;
+  max-height: min-content;
 
   @media (max-width: $tablet-width-only) {
     padding: 50px 0;
