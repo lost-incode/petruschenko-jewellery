@@ -7,7 +7,7 @@ var headerMenuButton = document.querySelector('.header__burger-button');
 var loginLink = document.querySelector('.header__menu-link--login');
 var userMenu = document.querySelector('.user-menu');
 
-if (window.screen.width > 1024) {
+if (window.innerWidth > 1024) {
   loginLink.style.right = userMenu.offsetWidth + 'px';
 }
 
@@ -25,7 +25,7 @@ document.querySelector('.header__cart-link').tabIndex = 4;
 loginLink.tabIndex = 3;
 document.querySelector('.nav__search input').tabIndex = 1;
 
-if (window.screen.width < 1024) {
+if (window.innerWidth < 1024) {
   document.querySelector('.header__logo').tabIndex = 0;
   document.querySelector('.header__cart-link').tabIndex = 0;
   loginLink.tabIndex = 0;
@@ -136,7 +136,7 @@ if (filtersSection) {
     });
   });
 
-  if (window.screen.width < 1024) {
+  if (window.innerWidth < 1024) {
     // Скрипт для открытия и закрытия модального окна фильтров
     filtersModalClose.addEventListener('click', function (evt) {
       evt.preventDefault();
