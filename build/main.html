@@ -390,10 +390,11 @@
         <div class="footer__email-block email-block">
           <h2 class="email-block__title">The good stuff in&nbsp;your inbox</h2>
           <p class="email-block__subtitle">News and updates from CH. No&nbsp;spam, we promise.</p>
-          <div class="email-block__input-wrapper">
-            <input type="email" class="email-block__input" placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-            <a href="#" class="email-block__link"><span class="email-block__link-text">Sign Up</span></a>
-          </div>
+          <form action="https://echo.htmlacademy.ru/" class="email-block__input-wrapper">
+            <label for="email-footer" class="visually-hidden">Напишите ваш email</label>
+            <input type="email" name="email-footer" id="email-footer" class="email-block__input" placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="">
+            <button type="submit" class="email-block__link"><span class="email-block__link-text">Sign Up</span>
+          </button></form>
         </div>
         <div class="footer__links links">
           <ul class="footer__list links__list">
