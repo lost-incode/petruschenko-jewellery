@@ -34,6 +34,7 @@
     column-gap: 16px;
     row-gap: 20px;
     padding-top: 5px;
+    width: max-content;
   }
 
   @media (max-width: $mobile-width-only) {
