@@ -14,6 +14,18 @@ headerMenuButton.addEventListener('click', function () {
   body.classList.toggle('overflow-hidden');
 });
 
+document.querySelector('.header__logo').tabIndex = 2;
+document.querySelector('.header__cart-link').tabIndex = 4;
+document.querySelector('.header__menu-link--login').tabIndex = 3;
+document.querySelector('.nav__search input').tabIndex = 1;
+
+if (window.screen.width < 1024) {
+  document.querySelector('.header__logo').tabIndex = 0;
+  document.querySelector('.header__cart-link').tabIndex = 0;
+  document.querySelector('.header__menu-link--login').tabIndex = 0;
+  document.querySelector('.nav__search input').tabIndex = 0;
+}
+
 var accordionBlocks = document.querySelectorAll('.accordion-block');
 var accordionTitleSections = document.querySelectorAll('.accordion__section');
 var accordionTitleWrappers = document.querySelectorAll('.accordion__wrapper');
