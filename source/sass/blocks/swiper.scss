@@ -11,6 +11,20 @@
   width: 270px;
   height: 347px;
 
+  @media (max-width: $desktop-maket-width) {
+    & img {
+      width: 270px;
+      height: 284px;
+    }
+  }
+
+  @media (max-width: $desktop-content-width) {
+    & img {
+      width: 200px;
+      height: 210px;
+    }
+  }
+
   @media (max-width: $tablet-width-only) {
     & img {
       width: 324px;
