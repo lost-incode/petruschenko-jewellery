@@ -34,6 +34,13 @@
 
   @media (max-width: 767px) {
     & img {
+      width: 230px;
+      height: 236px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & img {
       width: 130px;
       height: 136px;
     }

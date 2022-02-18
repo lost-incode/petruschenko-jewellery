@@ -19,8 +19,16 @@
   width: 290px;
   margin: 0 auto;
 
+  @media (min-width: ($mobile-width + 1px)) {
+    width: 93vw;
+  }
+
   @media (min-width: $tablet-width) {
     width: 678px;
+  }
+
+  @media (min-width: ($tablet-width + 1px)) {
+    width: 93vw;
   }
 
   @media (min-width: $desktop-width) {
