@@ -13,7 +13,8 @@
 .insta__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  // width: max-content;
   display: grid;
   grid-template-columns: 230px 399px 230px 230px;
   grid-template-rows: 230px 150px;
