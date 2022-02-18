@@ -11,6 +11,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   @media (max-width: $tablet-width-only) {
@@ -22,6 +23,7 @@
 .nav__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0;
   margin: 0;
@@ -41,10 +43,9 @@
   font-size: 16px;
   line-height: 24px;
   color: $basic-dark;
+  margin-right: 36px;
 
   &:not(:last-child) {
-    margin-right: 36px;
-
     @media (max-width: $tablet-width-only) {
       margin-bottom: 20px;
     }
