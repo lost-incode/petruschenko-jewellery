@@ -5,7 +5,7 @@
   // width: max-content;
 }
 
-.accordion__section {
+.accordion__section.accordion__section--opened {
   padding-bottom: 35px;
 
   @media (max-width: $mobile-width-only) {
@@ -33,6 +33,10 @@
     font-size: 16px;
     line-height: 140%;
   }
+}
+
+.accordion__section.accordion__section--opened .accordion-block__button {
+  padding-bottom: 0;
 }
 
 .accordion__text {

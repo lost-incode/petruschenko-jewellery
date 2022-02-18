@@ -15,6 +15,7 @@ headerMenuButton.addEventListener('click', function () {
 });
 
 var accordionBlocks = document.querySelectorAll('.accordion-block');
+var accordionTitleSections = document.querySelectorAll('.accordion__section');
 var accordionTitleWrappers = document.querySelectorAll('.accordion__wrapper');
 
 if (accordionBlocks) {
@@ -28,11 +29,13 @@ if (accordionBlocks) {
       if (j !== currentIndex && accordionContentBlocks[j].classList.contains('active')) {
         accordionContentBlocks[j].classList.remove('active');
         accordionTitleWrappers[j].classList.remove('accordion-block__button--hide');
+        accordionTitleSections[j].classList.remove('accordion__section--opened');
       }
     }
 
     accordionContentBlocks[Array.from(accordionTitleWrappers).indexOf(btn)].classList.toggle('active');
     btn.classList.toggle('accordion-block__button--hide');
+    accordionTitleSections[Array.from(accordionTitleWrappers).indexOf(btn)].classList.toggle('accordion__section--opened');
   };
 
   // При загрузке js, скрывает вкладки, которые открыты по умолчанию без js
