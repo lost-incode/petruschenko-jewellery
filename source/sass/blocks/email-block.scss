@@ -33,11 +33,16 @@
 }
 
 .email-block__input {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
   width: 100%;
   padding: 15px 0 10px 0;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $basic-white;
+  color: $basic-white;
 }
 
 .email-block__input::placeholder {
