@@ -125,6 +125,7 @@
     &--login {
       font-size: 18px;
       line-height: 130%;
+      padding-bottom: 40px;
     }
   }
 }
@@ -201,12 +202,14 @@
   @media (max-width: $tablet-width-only) {
     background-color: $basic-brown;
     position: fixed;
-    height: 100vh;
+    // height: calc(100vh + 1000px);
     top: 0;
     right: 0;
     width: 100%;
     z-index: 10;
-    // overflow: auto;
+    overflow-y: auto;
+    display: block;
+    max-height: calc(100vh + 20px);
 
     & .header__logo path {
       fill: $basic-white;
