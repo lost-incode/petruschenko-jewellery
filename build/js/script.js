@@ -4,6 +4,12 @@ var nav = header.querySelector('.nav');
 var body = document.querySelector('.page__body');
 
 var headerMenuButton = document.querySelector('.header__burger-button');
+var loginLink = document.querySelector('.header__menu-link--login');
+var userMenu = document.querySelector('.user-menu');
+
+if (window.screen.width > 1024) {
+  loginLink.style.right = userMenu.offsetWidth + 'px';
+}
 
 nav.classList.remove('nav--nojs');
 
@@ -16,13 +22,13 @@ headerMenuButton.addEventListener('click', function () {
 
 document.querySelector('.header__logo').tabIndex = 2;
 document.querySelector('.header__cart-link').tabIndex = 4;
-document.querySelector('.header__menu-link--login').tabIndex = 3;
+loginLink.tabIndex = 3;
 document.querySelector('.nav__search input').tabIndex = 1;
 
 if (window.screen.width < 1024) {
   document.querySelector('.header__logo').tabIndex = 0;
   document.querySelector('.header__cart-link').tabIndex = 0;
-  document.querySelector('.header__menu-link--login').tabIndex = 0;
+  loginLink.tabIndex = 0;
   document.querySelector('.nav__search input').tabIndex = 0;
 }
 

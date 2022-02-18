@@ -1,0 +1,12 @@
+.user-menu {
+  list-style: none;
+  justify-self: flex-end;
+  margin-top: 10px;
+  display: flex;
+  max-width: 80%;
+  flex-wrap: wrap;
+}
+
+.user-menu__item:not(:last-child) {
+  margin-right: 10px;
+}
