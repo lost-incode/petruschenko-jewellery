@@ -162,7 +162,7 @@
   .header__nav.nav--opened {
     margin-top: -2px;
     // overflow-y: auto;
-    max-height: calc(100vh + 20px);
+    height: calc(100vh + 20px);
     // height: max-content;
   }
 
