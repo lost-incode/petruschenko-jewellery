@@ -42,13 +42,17 @@ headerMenuButton.addEventListener('click', function () {
   body.classList.toggle('overflow-hidden');
 });
 
-document.querySelector('.header__logo').tabIndex = 2;
+if (document.querySelector('.header__logo--href')) {
+  document.querySelector('.header__logo--href').tabIndex = 2;
+}
 document.querySelector('.header__cart-link').tabIndex = 4;
 loginLink.tabIndex = 3;
 document.querySelector('.nav__search input').tabIndex = 1;
 
 if (window.innerWidth < 1024) {
-  document.querySelector('.header__logo').tabIndex = 0;
+  if (document.querySelector('.header__logo--href')) {
+    document.querySelector('.header__logo--href').tabIndex = 0;
+  }
   document.querySelector('.header__cart-link').tabIndex = 0;
   loginLink.tabIndex = 0;
   document.querySelector('.nav__search input').tabIndex = 0;
