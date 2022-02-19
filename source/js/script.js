@@ -11,6 +11,28 @@ if (window.innerWidth > 1024) {
   loginLink.style.right = userMenu.offsetWidth + 'px';
 }
 
+if (window.innerWidth > 767) {
+  var blogTitles = document.querySelectorAll('.blog__title');
+
+  if (blogTitles) {
+    var blogItems = document.querySelectorAll('.blog__item');
+
+    var resizeBlogItems = function () {
+      blogItems.forEach(function (item) {
+        if (item.offsetHeight > 300 || item.offsetHeight > 630) {
+          item.querySelector('.blog__picture').style.height = item.offsetHeight + 'px';
+          item.querySelector('.blog__picture picture').style.height = item.offsetHeight + 'px';
+          item.querySelector('.blog__picture img').style.height = item.offsetHeight + 'px';
+        }
+      });
+    };
+
+    setInterval(function () {
+      resizeBlogItems();
+    }, 1000);
+  }
+}
+
 nav.classList.remove('nav--nojs');
 
 headerMenuButton.addEventListener('click', function () {

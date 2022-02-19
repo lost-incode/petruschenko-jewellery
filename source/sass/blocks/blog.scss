@@ -19,6 +19,10 @@
   column-gap: 30px;
   row-gap: 30px;
   padding: 0;
+  min-height: 630px;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (max-width: $desktop-maket-width) {
     grid-template-columns: repeat(2, 1fr);
@@ -66,21 +70,24 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(2, 285px);
     // grid-template-rows: repeat(2, 300px);
-    grid-template-rows: 300px min-content;
+    grid-template-rows: 300px auto;
     row-gap: 30px;
     grid-column: 2;
     grid-row: 1 / -1;
     min-height: 630px;
+    width: max-content;
   }
 }
 
 .blog__picture {
-  background-color: $light-bg-color;
+  // background-color: $light-bg-color;
   width: 100%;
-  height: 300px;
+  height: 100%;
 
   & picture {
-    display: contents;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   @media (max-width: $desktop-maket-width) {
@@ -92,7 +99,7 @@
       img {
         object-fit: cover;
         width: 100%;
-        height: 100%;
+        height: 300px;
       }
     }
   }
@@ -100,17 +107,25 @@
   @media (max-width: $tablet-width-only) {
     max-width: 339px;
     width: 100%;
-    height: 300px;
+    height: 100%;
 
     & img {
       object-fit: cover;
       width: 100%;
-      height: 100%;
+      height: 300px;
     }
   }
 
   @media (max-width: $mobile-width-only) {
     height: 256px;
+
+    &:not(.blog__picture--main) img {
+      height: 256px;
+    }
+
+    & picture {
+      height: 256px;
+    }
 
     &:not(.blog__picture--main) {
       height: 256px;
@@ -122,6 +137,16 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
+    height: 630px;
+
+    & img {
+      width: 100%;
+      height: 630px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 300px;
   }
 }
 
@@ -181,8 +206,9 @@
   line-height: 130%;
   color: $basic-black;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 35px;
+  align-self: center;
+  padding-left: 10px;
+  padding-right: 10px;
 
   &--main {
     @media (max-width: $tablet-width-only) {
