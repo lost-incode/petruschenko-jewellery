@@ -3,6 +3,10 @@
   margin-left: auto;
   margin-right: auto;
   // width: max-content;
+
+  @media (max-width: 450px) {
+    width: 290px;
+  }
 }
 
 .accordion__section.accordion__section--opened {

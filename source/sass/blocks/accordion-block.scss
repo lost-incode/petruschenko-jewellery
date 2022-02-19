@@ -11,12 +11,15 @@
   color: $basic-dark;
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 15px;
     padding-left: 25px;
-    max-width: 206px;
     padding-right: 50px;
     display: block;
     height: max-content;
+  }
+
+  @media (max-width: 450px) {
+    max-width: 206px;
+    padding-top: 15px;
     padding-bottom: 15px;
   }
 }
