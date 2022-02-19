@@ -31,6 +31,10 @@
   @media (max-width: $tablet-width-only) {
     display: block;
   }
+
+  @media (max-width: 450px) {
+    width: 290px;
+  }
 }
 
 .footer__links {
